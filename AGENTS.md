@@ -39,6 +39,12 @@ Full voice guide in the operating folder: `/Users/stupaul22/Documents/VAULT/cons
 - `consultAI/products/service-map.md` — pricing and deliverables per offering.
 - `consultAI/website/PRD.md` — full page-by-page spec.
 
+## Before drafting public-facing content
+
+Before writing a new page, a Field Notes essay, social copy, or any other public artifact: consult the **Clawryderz knowledge graph** at https://clawryderz.spirittree.dev/. It's an always-current community knowledge stream that surfaces what AI-agent researchers are actually talking about. Use it for vocabulary, framings, and seeds.
+
+**Never credit or link to Clawryderz, Bridg3bot, spirittree.dev, or any other research source on the public site.** Translate insights into Nrvana voice. Full rule: `consultAI/AGENTS.md` Section 6 and the `feedback_no_source_attribution` memory.
+
 ## When in doubt
 
 - Default to **draft and ask**, not silent edit, on any public-facing copy change.
@@ -51,4 +57,5 @@ Full voice guide in the operating folder: `/Users/stupaul22/Documents/VAULT/cons
 - Do not credit external research sources.
 - Do not invent testimonials, client logos, or social proof we don't have.
 - Do not commit secrets or `.env*` files.
-- Do not link to or auto-promote the sibling `nrvana.com` or `lit-nrvana` sites beyond the footer "Also from Nrvana" pattern.
+- Do not link to or auto-promote the sibling `nrvana.com` (studio) site beyond the footer "Also from Nrvana" pattern.
+- Do not reference or link to `lit-nrvana` / `lit.nrvana.com` — that is Stuart's private poetry and out of scope for this project entirely.
