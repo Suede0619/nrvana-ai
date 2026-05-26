@@ -1,0 +1,36 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const upcoming = [
+  "Why your AI keeps forgetting you",
+  "The tools are ready. Your time isn't.",
+  "Stop hiring AI. Start building your Cortex.",
+  "What we won't replace at your company",
+  "Context is the new memory",
+  "The compounding loop: 15 minutes a week that makes your AI smarter",
+];
+---
+
+<BaseLayout title="Field Notes — Nrvana AI">
+  <section class="section pt-20 pb-12">
+    <h1 class="font-display text-5xl font-semibold tracking-tight">
+      Field Notes.
+    </h1>
+    <p class="mt-5 max-w-2xl text-lg" style="color: var(--color-ink-soft);">
+      Short essays on memory, context, identity, and the work of accelerating humans with AI.
+    </p>
+  </section>
+
+  <section class="section py-12">
+    <div class="rounded-2xl p-8" style="background-color: var(--color-canvas-soft);">
+      <div class="text-xs uppercase tracking-widest" style="color: var(--color-accent-deep);">First six, in flight</div>
+      <ul class="mt-4 space-y-3 font-display text-lg">
+        {upcoming.map((u) => <li>· {u}</li>)}
+      </ul>
+      <p class="mt-6 text-sm" style="color: var(--color-ink-soft);">
+        We're publishing one a week starting soon. Want them in your inbox? Email
+        <a href="mailto:hi@nrvana.com?subject=Field%20Notes" class="underline underline-offset-4">hi@nrvana.com</a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

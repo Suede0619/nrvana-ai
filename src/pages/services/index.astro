@@ -1,0 +1,102 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const ladder = [
+  {
+    step: "01",
+    title: "Snapshot",
+    desc: "See where your time is leaking. 5 named artifacts. Yours regardless.",
+    href: "/services/snapshot",
+    price: "$450 · 3 days",
+  },
+  {
+    step: "02",
+    title: "Setup",
+    desc: "Install your Personal Cortex (individuals) or a Workflow Sprint (teams).",
+    href: "/services/personal-cortex",
+    price: "$2,500 · 5–7 days",
+  },
+  {
+    step: "03",
+    title: "Retainer",
+    desc: "Compound. One new workflow a month. Your setup gets smarter, not staler.",
+    href: "/services/retainers",
+    price: "$500–$1,500 / mo",
+  },
+];
+
+const offerings = [
+  { name: "Acceleration Snapshot", audience: "Individual", length: "3 days", price: "$450", href: "/services/snapshot", out: "5 artifacts, named plan" },
+  { name: "Personal Cortex Setup", audience: "Individual", length: "5–7 days", price: "$2,500", href: "/services/personal-cortex", out: "L3 Cortex installed" },
+  { name: "Acceleration Retainer", audience: "Individual", length: "ongoing", price: "$500–$1,500/mo", href: "/services/retainers", out: "1 workflow/mo + maintenance" },
+  { name: "Agentic Readiness Diagnostic", audience: "Team", length: "5 days", price: "$2,500", href: "/services/diagnostic", out: "Stack gap + 90-day plan" },
+  { name: "Workflow Installation Sprint", audience: "Team", length: "2–4 weeks", price: "$5k–$15k", href: "/services/sprints", out: "1 module live + eval" },
+  { name: "Governance & Eval Setup", audience: "Team", length: "1–2 weeks", price: "$4k–$8k", href: "/services/governance", out: "Production-grade safety" },
+  { name: "Team Cortex Retainer", audience: "Team", length: "ongoing", price: "$2.5k–$7.5k/mo", href: "/services/retainers", out: "Module rollout cadence" },
+];
+---
+
+<BaseLayout title="Services — Nrvana AI">
+  <section class="section pt-20 pb-12">
+    <h1 class="font-display text-5xl font-semibold tracking-tight">
+      Three steps. Two products. <em>One thesis.</em>
+    </h1>
+    <p class="mt-5 max-w-2xl text-lg" style="color: var(--color-ink-soft);">
+      Snapshot to see. Setup to install. Retainer to compound.
+    </p>
+  </section>
+
+  <section class="section pb-20">
+    <div class="grid gap-6 md:grid-cols-3">
+      {ladder.map((l) => (
+        <a href={l.href} class="rounded-2xl border p-7 transition hover:-translate-y-0.5"
+           style="border-color: var(--color-line); background-color: white;">
+          <div class="text-xs uppercase tracking-widest" style="color: var(--color-accent-deep);">{l.step}</div>
+          <h3 class="mt-3 font-display text-2xl font-semibold">{l.title}</h3>
+          <p class="mt-3 text-sm" style="color: var(--color-ink-soft);">{l.desc}</p>
+          <div class="mt-5 text-sm font-medium">{l.price} →</div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="section py-12">
+    <h2 class="font-display text-3xl font-semibold">All offerings</h2>
+    <div class="mt-8 overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="border-b text-left text-xs uppercase tracking-wider"
+              style="border-color: var(--color-line); color: var(--color-ink-mute);">
+            <th class="py-3 pr-4">Offering</th>
+            <th class="py-3 pr-4">Audience</th>
+            <th class="py-3 pr-4">Length</th>
+            <th class="py-3 pr-4">Price</th>
+            <th class="py-3 pr-4">Outcome</th>
+            <th class="py-3"></th>
+          </tr>
+        </thead>
+        <tbody>
+          {offerings.map((o) => (
+            <tr class="border-b" style="border-color: var(--color-line);">
+              <td class="py-4 pr-4 font-medium">{o.name}</td>
+              <td class="py-4 pr-4" style="color: var(--color-ink-soft);">{o.audience}</td>
+              <td class="py-4 pr-4" style="color: var(--color-ink-soft);">{o.length}</td>
+              <td class="py-4 pr-4 font-medium">{o.price}</td>
+              <td class="py-4 pr-4" style="color: var(--color-ink-soft);">{o.out}</td>
+              <td class="py-4"><a href={o.href} class="underline underline-offset-4">See →</a></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section py-20">
+    <div class="rounded-2xl p-10 text-center" style="background-color: var(--color-canvas-soft);">
+      <p class="font-display text-2xl">Not sure where to start? <em>Just say hi.</em></p>
+      <div class="mt-6">
+        <a href="/contact" class="btn-primary">Send us a note</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

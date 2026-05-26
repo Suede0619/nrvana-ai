@@ -1,0 +1,73 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const deliverables = [
+  { name: "Your Soul File", desc: "A living identity kernel — how you think, what you care about, your voice, your constraints. Reusable across Claude, ChatGPT, Cursor, any new tool." },
+  { name: "Your Memory System", desc: "Markdown + vector setup so your AI remembers prior work without you re-explaining each session." },
+  { name: "Your Context Loadout", desc: "System prompts, project templates, daily-driver setup for your top three tools." },
+  { name: "Two installed workflows", desc: "Chosen from your Snapshot Acceleration Plan — or fresh if you're skipping the Snapshot." },
+  { name: "Your Compounding Routine", desc: "A 15-minute weekly ritual that makes your setup smarter every week. We teach it. You own it." },
+];
+---
+
+<BaseLayout title="Personal Cortex Setup — $2,500 · Nrvana AI">
+  <section class="section pt-20 pb-12">
+    <div class="text-xs uppercase tracking-widest" style="color: var(--color-accent-deep);">For you · Individual</div>
+    <h1 class="mt-4 font-display text-5xl font-semibold tracking-tight max-w-3xl">
+      Your AI shouldn't forget what you taught it last week. <em>Ours doesn't.</em>
+    </h1>
+    <p class="mt-5 max-w-2xl text-lg" style="color: var(--color-ink-soft);">
+      We build the identity, memory, and context layer that turns a generic chatbot into <em>your</em> agent. Then we hand it to you.
+    </p>
+  </section>
+
+  <section class="section py-8">
+    <div class="grid gap-4 rounded-2xl border p-8 sm:grid-cols-4"
+         style="border-color: var(--color-line); background-color: white;">
+      <div><div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">Length</div><div class="mt-1 font-display text-xl font-semibold">5–7 days</div></div>
+      <div><div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">Deliverables</div><div class="mt-1 font-display text-xl font-semibold">5 named</div></div>
+      <div><div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">Format</div><div class="mt-1 font-display text-xl font-semibold">Mostly async</div></div>
+      <div><div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">Fee</div><div class="mt-1 font-display text-xl font-semibold" style="color: var(--color-accent-deep);">$2,500 flat</div></div>
+    </div>
+  </section>
+
+  <section class="section py-12">
+    <h2 class="font-display text-3xl font-semibold">What you walk away with</h2>
+    <ol class="mt-8 space-y-6">
+      {deliverables.map((d, i) => (
+        <li class="flex gap-5">
+          <div class="font-display text-2xl font-semibold" style="color: var(--color-accent-deep); min-width: 2rem;">
+            {String(i + 1).padStart(2, "0")}
+          </div>
+          <div>
+            <h3 class="font-display text-xl font-medium">{d.name}</h3>
+            <p class="mt-1 text-sm" style="color: var(--color-ink-soft);">{d.desc}</p>
+          </div>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <section class="section py-12">
+    <div class="rounded-2xl p-10" style="background-color: var(--color-canvas-soft);">
+      <p class="font-display text-2xl">
+        Portable. <em>Yours regardless.</em>
+      </p>
+      <p class="mt-3" style="color: var(--color-ink-soft);">
+        Your Soul File and Memory System work with any LLM you choose. Fire us and take them anywhere.
+      </p>
+    </div>
+  </section>
+
+  <section class="section py-20">
+    <div class="rounded-2xl p-10 text-center" style="background-color: var(--color-ink); color: var(--color-canvas);">
+      <h2 class="font-display text-3xl font-semibold">Start your Personal Cortex.</h2>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="/contact?ref=personal-cortex" class="inline-flex items-center gap-2 rounded-md px-6 py-3 font-medium"
+           style="background-color: var(--color-canvas); color: var(--color-ink);">Book — $2,500</a>
+        <a href="/contact" class="inline-flex items-center gap-2 rounded-md px-6 py-3 underline underline-offset-4"
+           style="color: var(--color-canvas-soft);">Talk first</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

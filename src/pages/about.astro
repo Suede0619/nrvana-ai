@@ -1,0 +1,42 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="About — Nrvana AI">
+  <section class="section pt-20 pb-12">
+    <h1 class="font-display text-5xl font-semibold tracking-tight">
+      We are people who believe <em>people are the point.</em>
+    </h1>
+    <p class="mt-5 max-w-2xl text-lg" style="color: var(--color-ink-soft);">
+      Nrvana AI is a small consulting practice for individuals and small teams who want to use AI well — without firing anyone to do it.
+    </p>
+  </section>
+
+  <section class="section py-12">
+    <div class="grid gap-10 md:grid-cols-3">
+      <div class="md:col-span-1">
+        <div class="aspect-square w-full rounded-2xl"
+             style="background-color: var(--color-canvas-soft); border: 1px solid var(--color-line);"></div>
+        <div class="mt-4 font-display text-xl font-semibold">Stuart Paul</div>
+        <div class="text-sm" style="color: var(--color-ink-soft);">Founder · CEO</div>
+        <div class="mt-1 text-xs italic" style="color: var(--color-ink-mute);">"We make people unstoppable."</div>
+      </div>
+      <div class="md:col-span-2">
+        <h2 class="font-display text-2xl font-semibold">Why Nrvana AI exists</h2>
+        <p class="mt-4" style="color: var(--color-ink-soft);">
+          Enterprise AI consultancies pitch transformation at companies that can afford it. Generic SaaS agencies pitch hype at anyone with a credit card. Both leave a gap: individuals and small teams who suspect AI matters, haven't made it stick, and don't want to be sold replacement.
+        </p>
+        <p class="mt-4" style="color: var(--color-ink-soft);">
+          We fill that gap. We install AI memory, context, and workflows around the humans already doing the work. We price transparently. We ship in days. We hand everything back to you to keep.
+        </p>
+        <h2 class="mt-10 font-display text-2xl font-semibold">What we won't do</h2>
+        <ul class="mt-4 space-y-2 text-sm" style="color: var(--color-ink-soft);">
+          <li>· Help anyone replace people with AI. Hard line.</li>
+          <li>· Custom LLM training or fine-tuning. We integrate; we don't train base models.</li>
+          <li>· Surveillance work. We don't build agents that watch employees.</li>
+          <li>· Anything we wouldn't run on ourselves first.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
