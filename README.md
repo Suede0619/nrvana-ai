@@ -42,7 +42,7 @@ src/
 │   │   └── retainers.astro      (stub)
 │   ├── method.astro             (stub — full method page coming)
 │   ├── about.astro              Stuart Paul · Founder
-│   ├── field-notes/index.astro  Field Notes index (essays coming)
+│   ├── memos/index.astro  Memos index (essays coming)
 │   ├── contact.astro            Two doorways: book / say hi
 │   └── legal/                   Privacy + Terms (stubs)
 ├── styles/global.css            Tailwind + brand tokens
