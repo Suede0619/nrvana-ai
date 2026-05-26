@@ -57,5 +57,6 @@ Before writing a new page, a Field Notes essay, social copy, or any other public
 - Do not credit external research sources.
 - Do not invent testimonials, client logos, or social proof we don't have.
 - Do not commit secrets or `.env*` files.
-- Do not link to or auto-promote the sibling `nrvana.com` (studio) site beyond the footer "Also from Nrvana" pattern.
+- Do not link to or auto-promote the sibling `studio.nrvana.com` (Nrvana Studio — AI design) beyond the footer "Also from Nrvana" pattern.
+- Do not link to or reference `nrvana.com` (`nrvana-site`) — it is parked / obsolete (old web-2.0 portfolio). May be revived later; currently out of current Nrvana strategy.
 - Do not reference or link to `lit-nrvana` / `lit.nrvana.com` — that is Stuart's private poetry and out of scope for this project entirely.
