@@ -41,9 +41,9 @@ Full voice guide in the operating folder: `/Users/stupaul22/Documents/VAULT/cons
 
 ## Before drafting public-facing content
 
-Before writing a new page, a Field Notes essay, social copy, or any other public artifact: consult the **Clawryderz knowledge graph** at https://clawryderz.spirittree.dev/. It's an always-current community knowledge stream that surfaces what AI-agent researchers are actually talking about. Use it for vocabulary, framings, and seeds.
+Before writing a new page, a Field Notes essay, social copy, or any other public artifact: consult the **Clawryderz knowledge vault** at https://clawryderz.spirittree.dev/. Always-current community knowledge graph. **Authenticated; credentials in `/Users/stupaul22/Documents/VAULT/.env`.** Fastest way to get the channel's canonical position on any topic: ask Bridg3 directly via the floating 🐯 button (endpoint `POST /api/ask`).
 
-**Never credit or link to Clawryderz, Bridg3bot, spirittree.dev, or any other research source on the public site.** Translate insights into Nrvana voice. Full rule: `consultAI/AGENTS.md` Section 6 and the `feedback_no_source_attribution` memory.
+**Never credit or link to Clawryderz, Bridg3bot, spirittree.dev, or any other research source on the public site.** Translate insights into Nrvana voice. Full rule: `consultAI/AGENTS.md` and the `feedback_no_source_attribution` memory.
 
 ## When in doubt
 
