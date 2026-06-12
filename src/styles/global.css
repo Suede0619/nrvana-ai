@@ -5,7 +5,7 @@
    green-glow shadow. Display serif (Freight Display → Playfair substitute),
    clean grotesque body (Suisse → Inter substitute). */
 @theme {
-  --color-canvas: #f8faf8;        /* Off white */
+  --color-canvas: #ffffff;        /* White page background */
   --color-canvas-soft: #ebf4ee;   /* Pale mint — cards / alt sections */
   --color-canvas-warm: #d4e8dc;   /* Nature sky — deeper tint */
   --color-ink: #1c1c1c;           /* Charcoal */
