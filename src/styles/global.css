@@ -64,7 +64,7 @@
     background-color: var(--color-accent);
     color: #fff;
     padding: 0.8rem 1.75rem;
-    border-radius: 9999px;
+    border-radius: 4px;
     font-weight: 600;
     box-shadow: 0 2px 12px rgba(61, 122, 74, 0.3);
     transition: background-color 300ms ease, transform 200ms ease, box-shadow 300ms ease;
@@ -83,7 +83,7 @@
     background-color: var(--color-accent);
     color: #fff;
     padding: 0.8rem 1.75rem;
-    border-radius: 9999px;
+    border-radius: 4px;
     font-weight: 600;
     box-shadow: 0 2px 12px rgba(61, 122, 74, 0.3);
     transition: background-color 300ms ease, transform 200ms ease, box-shadow 300ms ease;
@@ -99,7 +99,7 @@
     align-items: center;
     gap: 0.5rem;
     padding: 0.8rem 1rem;
-    border-radius: 9999px;
+    border-radius: 4px;
     font-weight: 600;
     color: var(--color-accent);
     text-decoration: underline;
@@ -131,7 +131,7 @@
   }
 }
 
-/* Pill-shape the inline button utilities (Rivian signature). */
+/* Inline button utilities — 4px button radius. */
 .rounded-md {
-  border-radius: 9999px;
+  border-radius: 4px;
 }
