@@ -1,23 +1,25 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { CALL_HREF } from "../../siteConfig";
 
 const deliverables = [
-  "Eval pipeline (Langfuse or similar) — see reasoning, not just infra logs",
-  "Reasoning observability — what your agent actually thought, on every run",
-  "Your Agentic Constitution — machine-readable rules your agents can't lie about",
-  "HITL / HOTL design — what humans approve, monitor, or let run",
-  "California AB 316 readiness (where applicable)",
+  "A simple dashboard that shows what your AI is doing — in plain English, not code.",
+  "Quality checks that catch mistakes before they reach a customer.",
+  "Clear, written rules your AI follows — the same way you'd brief a new hire.",
+  "Sign-off points so a person always approves the things that matter most.",
+  "A short guide so your team knows exactly who's responsible for what.",
 ];
 ---
 
-<BaseLayout title="Governance & Eval Setup — Nrvana AI">
+<BaseLayout title="Safety & Quality Setup — Nrvana AI">
   <section class="section pt-20 pb-12">
     <div class="text-xs uppercase tracking-widest" style="color: var(--color-accent-deep);">For your team · 2–50 people</div>
     <h1 class="mt-4 font-display text-5xl font-semibold tracking-tight max-w-3xl">
-      Don't be the 40% that <em>never reaches production.</em>
+      Know your AI is doing the right thing — <em>and be able to prove it.</em>
     </h1>
     <p class="mt-5 max-w-2xl text-lg" style="color: var(--color-ink-soft);">
-      You're already running agents. We install the eval pipeline, observability, and governance so you know what they're actually doing — and can prove it.
+      Already using AI in your business? We set up the checks, the guardrails, and the plain-English
+      dashboard that let you sleep easy and show clients you've got it handled.
     </p>
   </section>
 
@@ -25,13 +27,13 @@ const deliverables = [
     <div class="grid gap-4 rounded-2xl border p-8 sm:grid-cols-3"
          style="border-color: var(--color-line); background-color: white;">
       <div><div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">Length</div><div class="mt-1 font-display text-xl font-semibold">1–2 weeks</div></div>
-      <div><div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">Outcome</div><div class="mt-1 font-display text-xl font-semibold">Production-grade</div></div>
-      <div><div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">Fee</div><div class="mt-1 font-display text-xl font-semibold" style="color: var(--color-accent-deep);">$4k–$8k</div></div>
+      <div><div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">You get</div><div class="mt-1 font-display text-xl font-semibold">Peace of mind</div></div>
+      <div><div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">Price</div><div class="mt-1 font-display text-xl font-semibold" style="color: var(--color-accent-deep);">$4k–$8k</div></div>
     </div>
   </section>
 
   <section class="section py-12">
-    <h2 class="font-display text-3xl font-semibold">What gets installed</h2>
+    <h2 class="font-display text-3xl font-semibold">What we set up</h2>
     <ul class="mt-6 space-y-3" style="color: var(--color-ink-soft);">
       {deliverables.map((d) => <li>· {d}</li>)}
     </ul>
@@ -39,10 +41,10 @@ const deliverables = [
 
   <section class="section py-20">
     <div class="rounded-2xl p-10 text-center" style="background-color: var(--color-ink); color: var(--color-canvas);">
-      <h2 class="font-display text-3xl font-semibold">Make production safe.</h2>
+      <h2 class="font-display text-3xl font-semibold">Run AI with confidence.</h2>
       <div class="mt-8">
-        <a href="/contact?ref=governance" class="inline-flex items-center gap-2 rounded-md px-6 py-3 font-medium"
-           style="background-color: var(--color-canvas); color: var(--color-ink);">Talk through Governance →</a>
+        <a href={CALL_HREF} class="inline-flex items-center gap-2 rounded-md px-6 py-3 font-medium"
+           style="background-color: var(--color-canvas); color: var(--color-ink);">Book a free 20-minute call</a>
       </div>
     </div>
   </section>

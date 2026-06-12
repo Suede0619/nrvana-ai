@@ -1,48 +1,50 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { CALL_HREF } from "../../siteConfig";
 
 const ladder = [
   {
     step: "01",
-    title: "Snapshot",
-    desc: "See where your time is leaking. 5 named artifacts. Yours to keep.",
+    title: "Start with a free call",
+    desc: "A relaxed 20-minute chat about your day and where AI could help. No pitch, no jargon, no commitment.",
+    href: CALL_HREF,
+    price: "Free · 20 min",
+  },
+  {
+    step: "02",
+    title: "Get a Snapshot",
+    desc: "In 3 days we map your time leaks and hand you a simple plan plus your first AI setup. $450, yours to keep.",
     href: "/services/snapshot",
     price: "$450 · 3 days",
   },
   {
-    step: "02",
-    title: "Setup",
-    desc: "Install your Personal Cortex (individuals) or a Workflow Sprint (teams).",
+    step: "03",
+    title: "Have us set it all up",
+    desc: "We build the full thing around you — and keep improving it month to month if you want us to.",
     href: "/services/personal-cortex",
     price: "$2,500 · 5–7 days",
-  },
-  {
-    step: "03",
-    title: "Retainer",
-    desc: "Compound. One new workflow a month. Your setup gets smarter, not staler.",
-    href: "/services/retainers",
-    price: "$500–$1,500 / mo",
   },
 ];
 
 const offerings = [
-  { name: "Acceleration Snapshot", audience: "Individual", length: "3 days", price: "$450", href: "/services/snapshot", out: "5 artifacts, named plan" },
-  { name: "Personal Cortex Setup", audience: "Individual", length: "5–7 days", price: "$2,500", href: "/services/personal-cortex", out: "L3 Cortex installed" },
-  { name: "Acceleration Retainer", audience: "Individual", length: "ongoing", price: "$500–$1,500/mo", href: "/services/retainers", out: "1 workflow/mo + maintenance" },
-  { name: "Agentic Readiness Diagnostic", audience: "Team", length: "5 days", price: "$2,500", href: "/services/diagnostic", out: "Stack gap + 90-day plan" },
-  { name: "Workflow Installation Sprint", audience: "Team", length: "2–4 weeks", price: "$5k–$15k", href: "/services/sprints", out: "1 module live + eval" },
-  { name: "Governance & Eval Setup", audience: "Team", length: "1–2 weeks", price: "$4k–$8k", href: "/services/governance", out: "Production-grade safety" },
-  { name: "Team Cortex Retainer", audience: "Team", length: "ongoing", price: "$2.5k–$7.5k/mo", href: "/services/retainers", out: "Module rollout cadence" },
+  { name: "The Snapshot", audience: "Individual", length: "3 days", price: "$450", href: "/services/snapshot", out: "Plan + your first AI setup" },
+  { name: "Your Personal Setup", audience: "Individual", length: "5–7 days", price: "$2,500", href: "/services/personal-cortex", out: "AI set up around you" },
+  { name: "Monthly Support", audience: "Individual", length: "ongoing", price: "$500–$1,500/mo", href: "/services/retainers", out: "One new win a month" },
+  { name: "Team Review", audience: "Team", length: "5 days", price: "$2,500", href: "/services/diagnostic", out: "Plan + quick wins for the team" },
+  { name: "Done-for-You Setup", audience: "Team", length: "2–4 weeks", price: "$5k–$15k", href: "/services/sprints", out: "A full workflow, live and working" },
+  { name: "Safety & Quality Setup", audience: "Team", length: "1–2 weeks", price: "$4k–$8k", href: "/services/governance", out: "Confidence it's all working right" },
+  { name: "Team Monthly Support", audience: "Team", length: "ongoing", price: "$2.5k–$7.5k/mo", href: "/services/retainers", out: "Ongoing improvements" },
 ];
 ---
 
 <BaseLayout title="Services — Nrvana AI">
   <section class="section pt-20 pb-12">
     <h1 class="font-display text-5xl font-semibold tracking-tight">
-      Three steps. Two products. <em>One thesis.</em>
+      Start small. <em>Grow at your pace.</em>
     </h1>
     <p class="mt-5 max-w-2xl text-lg" style="color: var(--color-ink-soft);">
-      Snapshot to see. Setup to install. Retainer to compound.
+      A free chat to see if it's a fit. A Snapshot to get going. A full setup when you're ready.
+      No pressure to climb the ladder — pick the rung that fits you today.
     </p>
   </section>
 
@@ -61,17 +63,18 @@ const offerings = [
   </section>
 
   <section class="section py-12">
-    <h2 class="font-display text-3xl font-semibold">All offerings</h2>
+    <h2 class="font-display text-3xl font-semibold">Everything we offer</h2>
+    <p class="mt-2 text-sm" style="color: var(--color-ink-mute);">Most people start with a free call or the Snapshot. The rest is here when you need it.</p>
     <div class="mt-8 overflow-x-auto">
       <table class="w-full text-sm">
         <thead>
           <tr class="border-b text-left text-xs uppercase tracking-wider"
               style="border-color: var(--color-line); color: var(--color-ink-mute);">
-            <th class="py-3 pr-4">Offering</th>
-            <th class="py-3 pr-4">Audience</th>
+            <th class="py-3 pr-4">What it is</th>
+            <th class="py-3 pr-4">For</th>
             <th class="py-3 pr-4">Length</th>
             <th class="py-3 pr-4">Price</th>
-            <th class="py-3 pr-4">Outcome</th>
+            <th class="py-3 pr-4">You get</th>
             <th class="py-3"></th>
           </tr>
         </thead>
@@ -93,9 +96,9 @@ const offerings = [
 
   <section class="section py-20">
     <div class="rounded-2xl p-10 text-center" style="background-color: var(--color-canvas-soft);">
-      <p class="font-display text-2xl">Not sure where to start? <em>Just say hi.</em></p>
+      <p class="font-display text-2xl">Not sure where to start? <em>Let's just talk.</em></p>
       <div class="mt-6">
-        <a href="/contact" class="btn-primary">Send us a note</a>
+        <a href={CALL_HREF} class="btn-primary">Book a free 20-minute call</a>
       </div>
     </div>
   </section>

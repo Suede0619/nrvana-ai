@@ -1,14 +1,16 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { CALL_HREF } from "../../siteConfig";
 ---
 
-<BaseLayout title="Retainers — Nrvana AI">
+<BaseLayout title="Monthly Support — Nrvana AI">
   <section class="section pt-20 pb-12">
     <h1 class="font-display text-5xl font-semibold tracking-tight max-w-3xl">
-      Compound. <em>One workflow at a time.</em>
+      Keep getting faster. <em>A little every month.</em>
     </h1>
     <p class="mt-5 max-w-2xl text-lg" style="color: var(--color-ink-soft);">
-      After Setup or a Sprint, retainers keep your AI getting smarter — not staler.
+      Once your setup is in place, we stick around to keep it sharp and add one new time-saver a month.
+      Optional, friendly, cancel whenever.
     </p>
   </section>
 
@@ -16,25 +18,25 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     <div class="grid gap-8 md:grid-cols-2">
       <div class="rounded-2xl border p-8" style="border-color: var(--color-line); background-color: white;">
         <div class="text-xs uppercase tracking-widest" style="color: var(--color-accent-deep);">For you · Individual</div>
-        <h2 class="mt-3 font-display text-2xl font-semibold">Acceleration Retainer</h2>
+        <h2 class="mt-3 font-display text-2xl font-semibold">Monthly Support</h2>
         <div class="mt-2 font-display text-2xl">$500–$1,500 / mo</div>
         <ul class="mt-6 space-y-2 text-sm" style="color: var(--color-ink-soft);">
-          <li>· 1 new workflow installed each month</li>
-          <li>· Memory + Context maintenance (your setup gets smarter, not staler)</li>
-          <li>· 60 minutes of synchronous problem-solving</li>
-          <li>· Access to new modules as we ship them</li>
+          <li>· One new time-saver set up each month</li>
+          <li>· We keep your AI current, so it stays sharp as you grow</li>
+          <li>· An hour with us to solve whatever's in your way</li>
+          <li>· First access to new helpers as we build them</li>
         </ul>
       </div>
 
       <div class="rounded-2xl border p-8" style="border-color: var(--color-line); background-color: white;">
         <div class="text-xs uppercase tracking-widest" style="color: var(--color-accent-deep);">For your team · 2–50</div>
-        <h2 class="mt-3 font-display text-2xl font-semibold">Team Cortex Retainer</h2>
+        <h2 class="mt-3 font-display text-2xl font-semibold">Team Monthly Support</h2>
         <div class="mt-2 font-display text-2xl">$2,500–$7,500 / mo</div>
         <ul class="mt-6 space-y-2 text-sm" style="color: var(--color-ink-soft);">
-          <li>· Shared team memory + procedural knowledge maintenance</li>
-          <li>· 1 module installed or upgraded per month</li>
-          <li>· Monthly eval report with recommendations</li>
-          <li>· Async + 90 minutes synchronous time / month</li>
+          <li>· One helper set up or upgraded each month</li>
+          <li>· We keep your team's shared AI knowledge current</li>
+          <li>· A monthly check-in on how it's working, with ideas to make it better</li>
+          <li>· Email access plus 90 minutes with us each month</li>
         </ul>
       </div>
     </div>
@@ -44,7 +46,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     <div class="rounded-2xl p-10 text-center" style="background-color: var(--color-canvas-soft);">
       <p class="font-display text-2xl">Cancel anytime. <em>The setup is still yours.</em></p>
       <div class="mt-6">
-        <a href="/contact?ref=retainer" class="btn-primary">Talk through a retainer</a>
+        <a href={CALL_HREF} class="btn-primary">Book a free 20-minute call</a>
       </div>
     </div>
   </section>

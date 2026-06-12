@@ -1,23 +1,25 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { CALL_HREF } from "../../siteConfig";
 
 const deliverables = [
-  { name: "Your Stack Map", desc: "Which agentic-stack layers your team has today, scored 0–3 per layer." },
-  { name: "Your Plane Health Chart", desc: "Identity, Memory, Context, Policy, Telemetry — each scored 0–3." },
-  { name: "Your Binding Constraint", desc: "The one missing layer that is capping every AI initiative you've tried." },
-  { name: "Your 90-Day Acceleration Plan", desc: "What to install first, second, third — with effort and expected hours-back." },
-  { name: "\"What This Will Not Replace\" appendix", desc: "Contractual: which roles AI will amplify, which roles are off-limits. The document that lets a worried team relax." },
+  { name: "Your Time-Back Map", desc: "Where your team's hours actually go each week — and the biggest ones AI can hand back, ranked by impact." },
+  { name: "Your Tool Picture", desc: "What you're paying for now, what's worth keeping, and the handful of tools we'd actually set up for your team." },
+  { name: "Your People + AI Plan", desc: "For each person: what AI takes off their plate, and where it frees them to grow into higher-value work. The page that gets your team excited, not worried." },
+  { name: "Your 90-Day Plan", desc: "What we'd set up first, second, and third — in plain steps, with the hours-back you can expect from each." },
+  { name: "Your Quick Wins", desc: "Two or three things your team can start using the week after we finish. Momentum from day one." },
 ];
 ---
 
-<BaseLayout title="Agentic Readiness Diagnostic — $2,500 · Nrvana AI">
+<BaseLayout title="Team Review — $2,500 · Nrvana AI">
   <section class="section pt-20 pb-12">
     <div class="text-xs uppercase tracking-widest" style="color: var(--color-accent-deep);">For your team · 2–50 people</div>
     <h1 class="mt-4 font-display text-5xl font-semibold tracking-tight max-w-3xl">
-      The diagnostic that names what's missing — <em>and what you'll never replace.</em>
+      See exactly how AI can give your team <em>its time back.</em>
     </h1>
     <p class="mt-5 max-w-2xl text-lg" style="color: var(--color-ink-soft);">
-      Five days. Five named artifacts. A 90-day plan that protects every role on your team.
+      Five days. Five plain-English deliverables. A simple 90-day plan that gets everyone doing
+      more of the work they're best at — and excited about it.
     </p>
   </section>
 
@@ -25,9 +27,9 @@ const deliverables = [
     <div class="grid gap-4 rounded-2xl border p-8 sm:grid-cols-4"
          style="border-color: var(--color-line); background-color: white;">
       <div><div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">Length</div><div class="mt-1 font-display text-xl font-semibold">5 days</div></div>
-      <div><div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">Deliverables</div><div class="mt-1 font-display text-xl font-semibold">5 named</div></div>
-      <div><div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">Team time</div><div class="mt-1 font-display text-xl font-semibold">8–12 hours</div></div>
-      <div><div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">Fee</div><div class="mt-1 font-display text-xl font-semibold" style="color: var(--color-accent-deep);">$2,500 flat</div></div>
+      <div><div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">You get</div><div class="mt-1 font-display text-xl font-semibold">5 deliverables</div></div>
+      <div><div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">Team time</div><div class="mt-1 font-display text-xl font-semibold">A few hours</div></div>
+      <div><div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">Price</div><div class="mt-1 font-display text-xl font-semibold" style="color: var(--color-accent-deep);">$2,500 flat</div></div>
     </div>
   </section>
 
@@ -51,22 +53,23 @@ const deliverables = [
   <section class="section py-12">
     <div class="rounded-2xl p-10" style="background-color: var(--color-canvas-soft);">
       <p class="font-display text-2xl">
-        Plan is yours. Privacy is yours. <em>Outcomes are yours.</em>
+        The plan is yours. Your privacy is yours. <em>The wins are yours.</em>
       </p>
       <p class="mt-3" style="color: var(--color-ink-soft);">
-        We will not store, sell, or reuse anything we learn about your team or your data. Every artifact is yours to keep.
+        Everything we learn about your team stays private to your team. Every deliverable is yours to keep.
       </p>
     </div>
   </section>
 
   <section class="section py-20">
     <div class="rounded-2xl p-10 text-center" style="background-color: var(--color-ink); color: var(--color-canvas);">
-      <h2 class="font-display text-3xl font-semibold">Book the Diagnostic.</h2>
+      <h2 class="font-display text-3xl font-semibold">Ready when you are.</h2>
+      <p class="mt-3" style="color: var(--color-canvas-soft);">Book the Team Review — or start with a free chat to see if it's a fit.</p>
       <div class="mt-8 flex flex-wrap justify-center gap-4">
-        <a href="/contact?ref=diagnostic" class="inline-flex items-center gap-2 rounded-md px-6 py-3 font-medium"
-           style="background-color: var(--color-canvas); color: var(--color-ink);">Book — $2,500</a>
-        <a href="/contact" class="inline-flex items-center gap-2 rounded-md px-6 py-3 underline underline-offset-4"
-           style="color: var(--color-canvas-soft);">Talk first</a>
+        <a href={CALL_HREF} class="inline-flex items-center gap-2 rounded-md px-6 py-3 font-medium"
+           style="background-color: var(--color-canvas); color: var(--color-ink);">Book a free 20-minute call</a>
+        <a href="/contact?ref=team-review" class="inline-flex items-center gap-2 rounded-md px-6 py-3 underline underline-offset-4"
+           style="color: var(--color-canvas-soft);">Book the Team Review — $2,500</a>
       </div>
     </div>
   </section>

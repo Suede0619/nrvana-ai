@@ -1,24 +1,50 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { CALL_HREF } from "../siteConfig";
+
+const steps = [
+  { t: "It knows you", d: "We give your AI a clear sense of who you are, how you work, and what you care about — so its help actually sounds like you, not a generic robot." },
+  { t: "It remembers", d: "No more re-explaining yourself every time. Your AI keeps track of your projects and picks up where you left off." },
+  { t: "It has what it needs", d: "We load it up with the context, templates, and tools for your real work — so it's useful from minute one." },
+];
 ---
 
-<BaseLayout title="The Nrvana Method">
+<BaseLayout title="How it works — Nrvana AI">
   <section class="section pt-20 pb-12">
     <h1 class="font-display text-5xl font-semibold tracking-tight">
-      Three things most AI consultancies skip. <em>We start there.</em>
+      Most AI help skips the part that matters. <em>We start there.</em>
     </h1>
     <p class="mt-5 max-w-2xl text-lg" style="color: var(--color-ink-soft);">
-      Identity. Memory. Context. The unsexy layer that turns a generic chatbot into <em>your</em> agent.
+      The difference between a chatbot that wastes your time and one that genuinely helps comes down
+      to three simple things. We set up all three for you.
     </p>
   </section>
 
   <section class="section py-12">
-    <p class="text-sm" style="color: var(--color-ink-mute);">
-      Method page — full version landing soon. Coming with it: the layer diagram, the five planes
-      (Identity · Memory · Context · Policy · Telemetry), and a worked example heatmap.
-    </p>
-    <div class="mt-8">
-      <a href="/services/snapshot" class="btn-primary">In the meantime — Book the Snapshot · $450</a>
+    <div class="grid gap-10 md:grid-cols-3">
+      {steps.map((s, i) => (
+        <div>
+          <div class="font-display text-3xl font-semibold" style="color: var(--color-accent-deep);">{String(i + 1).padStart(2, "0")}</div>
+          <h2 class="mt-2 font-display text-2xl font-medium">{s.t}</h2>
+          <p class="mt-3 text-sm" style="color: var(--color-ink-soft);">{s.d}</p>
+        </div>
+      ))}
     </div>
+  </section>
+
+  <section class="section py-12">
+    <div class="rounded-2xl p-10" style="background-color: var(--color-canvas-soft);">
+      <p class="font-display text-2xl">
+        You don't have to understand any of it. <em>That's our job.</em>
+      </p>
+      <p class="mt-3" style="color: var(--color-ink-soft);">
+        We handle the setup. You get something that just works — and saves you hours.
+      </p>
+    </div>
+  </section>
+
+  <section class="section py-16">
+    <a href={CALL_HREF} class="btn-primary">Book a free 20-minute call</a>
+    <a href="/services/snapshot" class="btn-ghost ml-2">Or start with the $450 Snapshot →</a>
   </section>
 </BaseLayout>

@@ -1,27 +1,28 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { CALL_HREF } from "../siteConfig";
 
-const stats = [
-  { num: "18%", label: "reasoning gains from sleep-time compute" },
-  { num: "90%+", label: "outperformance from well-orchestrated multi-agent setups" },
-  { num: "5×", label: "revenue per employee at AI-native firms" },
-  { num: "<1%", label: "of agent cost is the model — the rest is setup. We do the setup." },
+const promises = [
+  { num: "5–10 hrs", label: "the time we typically give a solo owner back, every week" },
+  { num: "Days", label: "to set up — not months" },
+  { num: "No jargon", label: "you never need to be technical. That's our job." },
+  { num: "Yours", label: "everything we build is yours to keep, forever" },
 ];
 
 const doorways = [
   {
     label: "For you",
-    headline: "You, faster.",
-    body: "Solo professionals, founders, operators, creators. We install your AI memory, your context, your top three workflows — in days.",
+    headline: "Get your evenings back.",
+    body: "Solo owners, founders, freelancers, creators. We set up AI around how you actually work — so the busywork takes minutes and you get your time back for the parts only you can do.",
     cta: { href: "/services/snapshot", label: "Start with the Snapshot — $450" },
-    sub: { href: "/services/personal-cortex", label: "Or the full Personal Cortex →" },
+    sub: { href: "/services/personal-cortex", label: "Or see the full setup →" },
   },
   {
     label: "For your team",
-    headline: "Your team, unstoppable.",
-    body: "2 to 50 people. We map your agentic stack, name the binding constraint, and ship a 90-day plan that protects every role.",
-    cta: { href: "/services/diagnostic", label: "Start with the Diagnostic — $2,500" },
-    sub: { href: "/services/sprints", label: "Or a Workflow Sprint →" },
+    headline: "Run like a team twice your size.",
+    body: "2 to 50 people. We find where your team's hours are going, set up the AI that hands them back, and leave you with a simple plan anyone can follow.",
+    cta: { href: "/services/diagnostic", label: "Start with a Team Review — $2,500" },
+    sub: { href: "/services/sprints", label: "Or a done-for-you setup →" },
   },
 ];
 ---
@@ -30,26 +31,29 @@ const doorways = [
   <!-- HERO -->
   <section class="section pt-20 pb-16">
     <h1 class="font-display text-5xl md:text-6xl font-semibold tracking-tight max-w-3xl">
-      You pay for AI tools. <em>We make them work for you.</em>
+      You pay for AI tools. <em>We make them actually work for you.</em>
     </h1>
     <p class="mt-6 max-w-2xl text-lg" style="color: var(--color-ink-soft);">
-      Memory, context, workflows — installed in days. Built around how you actually work.
-      We accelerate the humans doing the work. We never replace them.
+      We set up AI around how you already work — so you save hours every week and your
+      small team punches way above its size. You never need to be technical. That part's on us.
     </p>
     <div class="mt-10 flex flex-wrap items-center gap-4">
-      <a href="/services/snapshot" class="btn-primary">
-        Book the Acceleration Snapshot — $450 · 3 days
+      <a href={CALL_HREF} class="btn-primary">
+        Book a free 20-minute call
       </a>
-      <a href="/contact" class="btn-ghost">Just say hi</a>
+      <a href="/services/snapshot" class="btn-ghost">Or start with the $450 Snapshot →</a>
     </div>
+    <p class="mt-4 text-sm" style="color: var(--color-ink-mute);">
+      No pitch, no jargon. Just a friendly chat about where AI could save you time.
+    </p>
   </section>
 
   <!-- THESIS -->
   <section class="border-y py-20" style="border-color: var(--color-line); background-color: var(--color-canvas-soft);">
     <div class="section">
       <p class="mx-auto max-w-3xl text-center font-display text-3xl md:text-4xl leading-tight">
-        We help people and small businesses thrive in the AI age — by
-        <em>accelerating their work,</em> never by replacing them.
+        We help people and small businesses do more of what they're great at — and
+        <em>let AI handle the rest.</em>
       </p>
     </div>
   </section>
@@ -73,64 +77,66 @@ const doorways = [
     </div>
   </section>
 
-  <!-- STAT SLAB -->
+  <!-- WHAT YOU GET -->
   <section class="section py-20">
     <div class="mb-10">
-      <h3 class="font-display text-2xl font-semibold">What becomes possible.</h3>
-      <p class="mt-2 text-sm" style="color: var(--color-ink-mute);">The numbers we lead with — chosen for what AI unlocks, not what it abandons.</p>
+      <h3 class="font-display text-2xl font-semibold">What it feels like.</h3>
+      <p class="mt-2 text-sm" style="color: var(--color-ink-mute);">No tech background required. We do the hard part; you keep the time.</p>
     </div>
     <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
-      {stats.map((s) => (
+      {promises.map((p) => (
         <div>
-          <div class="font-display text-4xl font-semibold" style="color: var(--color-accent-deep);">{s.num}</div>
-          <div class="mt-2 text-sm" style="color: var(--color-ink-soft);">{s.label}</div>
+          <div class="font-display text-4xl font-semibold" style="color: var(--color-accent-deep);">{p.num}</div>
+          <div class="mt-2 text-sm" style="color: var(--color-ink-soft);">{p.label}</div>
         </div>
       ))}
     </div>
   </section>
 
-  <!-- METHOD PREVIEW -->
+  <!-- HOW IT WORKS -->
   <section class="section py-20">
     <div class="grid gap-12 md:grid-cols-3">
       <div>
         <div class="font-display text-3xl font-semibold">01</div>
-        <h4 class="mt-2 font-display text-xl font-medium">Diagnose</h4>
+        <h4 class="mt-2 font-display text-xl font-medium">We find your time leaks</h4>
         <p class="mt-3 text-sm" style="color: var(--color-ink-soft);">
-          Where is your time leaking? Where does AI extend you? We map it in days, not quarters.
+          A quick look at how your week actually goes, and where AI can quietly take the load off.
         </p>
       </div>
       <div>
         <div class="font-display text-3xl font-semibold">02</div>
-        <h4 class="mt-2 font-display text-xl font-medium">Install</h4>
+        <h4 class="mt-2 font-display text-xl font-medium">We set it all up</h4>
         <p class="mt-3 text-sm" style="color: var(--color-ink-soft);">
-          Memory, context, workflows — built around how you actually work. Yours to keep.
+          We build it around how you work — so it knows your style, remembers your projects, and saves you hours. You just use it.
         </p>
       </div>
       <div>
         <div class="font-display text-3xl font-semibold">03</div>
-        <h4 class="mt-2 font-display text-xl font-medium">Compound</h4>
+        <h4 class="mt-2 font-display text-xl font-medium">We keep making you faster</h4>
         <p class="mt-3 text-sm" style="color: var(--color-ink-soft);">
-          A 15-minute weekly ritual that makes your setup smarter every week. We teach it. You own it.
+          A simple weekly habit keeps it sharp as you grow. We teach it. You own it.
         </p>
       </div>
     </div>
     <div class="mt-12">
-      <a href="/method" class="btn-ghost px-0">See the full method →</a>
+      <a href="/method" class="btn-ghost px-0">See how it works →</a>
     </div>
   </section>
 
   <!-- FIRST COHORT NOTE -->
   <section class="section py-20">
     <div class="rounded-2xl p-10" style="background-color: var(--color-canvas-soft);">
-      <div class="text-xs uppercase tracking-widest" style="color: var(--color-accent-deep);">Our first cohort</div>
+      <div class="text-xs uppercase tracking-widest" style="color: var(--color-accent-deep);">Our first clients</div>
       <h3 class="mt-3 font-display text-2xl font-medium">
-        We are running our first paid Snapshots now.
+        We're taking on our first handful of clients now.
       </h3>
       <p class="mt-3 max-w-2xl" style="color: var(--color-ink-soft);">
-        Names, photos, and outcomes from our first three clients will go here. If you want to be one of those names — at the launch price — that's why this page exists.
+        Their names, photos, and the hours we gave them back will live here. Want to be one of
+        the first — at the launch price? That's exactly why this page exists.
       </p>
-      <div class="mt-6">
-        <a href="/services/snapshot" class="btn-primary">Book the Snapshot — $450</a>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href={CALL_HREF} class="btn-primary">Book a free 20-minute call</a>
+        <a href="/services/snapshot" class="btn-ghost">Or the $450 Snapshot →</a>
       </div>
     </div>
   </section>
@@ -139,14 +145,14 @@ const doorways = [
   <section class="section py-24">
     <div class="mx-auto max-w-3xl text-center">
       <p class="font-display text-3xl md:text-4xl">
-        The plan is yours. <em>Take it with you.</em>
+        Everything we build for you is <em>yours to keep.</em>
       </p>
       <p class="mt-4" style="color: var(--color-ink-soft);">
-        Every artifact we make for you is yours to keep. No retainer required. No lock-in.
+        No lock-in. No retainer required. Start with a free chat and see if it's a fit.
       </p>
       <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
-        <a href="/services/snapshot" class="btn-primary">Book the Acceleration Snapshot — $450</a>
-        <a href="/contact" class="btn-ghost">Just say hi</a>
+        <a href={CALL_HREF} class="btn-primary">Book a free 20-minute call</a>
+        <a href="/services/snapshot" class="btn-ghost">Or start with the $450 Snapshot →</a>
       </div>
     </div>
   </section>

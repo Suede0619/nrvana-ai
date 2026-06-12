@@ -1,13 +1,14 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { CALL_HREF, BOOKING_EMAIL } from "../../siteConfig";
 
 const upcoming = [
-  "Why your AI keeps forgetting you",
-  "The tools are ready. Your time isn't.",
-  "Stop hiring AI. Start building your Cortex.",
-  "What we won't replace at your company",
-  "Context is the new memory",
-  "The compounding loop: 15 minutes a week that makes your AI smarter",
+  "Why your AI keeps forgetting you — and the simple fix",
+  "Get your evenings back: where AI actually saves time",
+  "You don't need to be technical to use AI well",
+  "How a one-person business can run like a team of ten",
+  "Set it up once, save hours every week",
+  "The 15-minute weekly habit that keeps your AI sharp",
 ];
 ---
 
@@ -17,7 +18,7 @@ const upcoming = [
       Memos.
     </h1>
     <p class="mt-5 max-w-2xl text-lg" style="color: var(--color-ink-soft);">
-      Short essays on memory, context, identity, and the work of accelerating humans with AI.
+      Short, plain-English notes on using AI to get your time back — no jargon, no hype.
     </p>
   </section>
 
@@ -29,8 +30,11 @@ const upcoming = [
       </ul>
       <p class="mt-6 text-sm" style="color: var(--color-ink-soft);">
         We're publishing one a week starting soon. Want them in your inbox? Email
-        <a href="mailto:hi@nrvana.com?subject=Field%20Notes" class="underline underline-offset-4">hi@nrvana.com</a>.
+        <a href={`mailto:${BOOKING_EMAIL}?subject=Memos`} class="underline underline-offset-4">{BOOKING_EMAIL}</a>.
       </p>
+      <div class="mt-6">
+        <a href={CALL_HREF} class="btn-primary">Book a free 20-minute call</a>
+      </div>
     </div>
   </section>
 </BaseLayout>

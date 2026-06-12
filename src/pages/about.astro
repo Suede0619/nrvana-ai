@@ -1,5 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { CALL_HREF } from "../siteConfig";
+
+const beliefs = [
+  { t: "Your time is the point.", d: "We measure success in hours handed back to you and your team — time for the work only you can do." },
+  { t: "Plain English, always.", d: "You should never feel talked down to or lost in jargon. If we can't explain it simply, we haven't finished thinking." },
+  { t: "Built around you.", d: "We set AI up to know your style, your customers, and your way of working — so it feels like an extension of you." },
+  { t: "Yours to keep.", d: "Everything we make is handed to you to own. Transparent prices, no lock-in, no surprises." },
+];
 ---
 
 <BaseLayout title="About — Nrvana AI">
@@ -8,7 +16,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       We are people who believe <em>people are the point.</em>
     </h1>
     <p class="mt-5 max-w-2xl text-lg" style="color: var(--color-ink-soft);">
-      Nrvana AI is a small consulting practice for individuals and small teams who want to use AI well — without firing anyone to do it.
+      Nrvana AI is a small, friendly practice that helps individuals and small teams get real,
+      practical value from AI — and get their time back.
     </p>
   </section>
 
@@ -24,18 +33,29 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <div class="md:col-span-2">
         <h2 class="font-display text-2xl font-semibold">Why Nrvana AI exists</h2>
         <p class="mt-4" style="color: var(--color-ink-soft);">
-          Enterprise AI consultancies pitch transformation at companies that can afford it. Generic SaaS agencies pitch hype at anyone with a credit card. Both leave a gap: individuals and small teams who suspect AI matters, haven't made it stick, and don't want to be sold replacement.
+          Most AI help is built for big companies with big budgets — or it's hype aimed at anyone
+          with a credit card. That leaves a gap: real people and small teams who know AI matters,
+          haven't had time to figure it out, and just want it to work.
         </p>
         <p class="mt-4" style="color: var(--color-ink-soft);">
-          We fill that gap. We install AI memory, context, and workflows around the humans already doing the work. We price transparently. We ship in days. We hand everything back to you to keep.
+          We fill that gap. We set up the AI memory, context, and workflows around the people
+          already doing the work — so your day gets lighter and your output gets bigger. We price
+          plainly. We move in days. And we hand everything to you to keep.
         </p>
-        <h2 class="mt-10 font-display text-2xl font-semibold">What we won't do</h2>
-        <ul class="mt-4 space-y-2 text-sm" style="color: var(--color-ink-soft);">
-          <li>· Help anyone replace people with AI. Hard line.</li>
-          <li>· Custom LLM training or fine-tuning. We integrate; we don't train base models.</li>
-          <li>· Surveillance work. We don't build agents that watch employees.</li>
-          <li>· Anything we wouldn't run on ourselves first.</li>
+
+        <h2 class="mt-10 font-display text-2xl font-semibold">What we believe</h2>
+        <ul class="mt-4 space-y-4">
+          {beliefs.map((b) => (
+            <li>
+              <div class="font-medium">{b.t}</div>
+              <div class="mt-1 text-sm" style="color: var(--color-ink-soft);">{b.d}</div>
+            </li>
+          ))}
         </ul>
+
+        <div class="mt-10">
+          <a href={CALL_HREF} class="btn-primary">Book a free 20-minute call</a>
+        </div>
       </div>
     </div>
   </section>
