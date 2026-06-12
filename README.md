@@ -45,7 +45,9 @@ src/
 │   ├── memos/index.astro  Memos index (essays coming)
 │   ├── contact.astro            Two doorways: book / say hi
 │   └── legal/                   Privacy + Terms (stubs)
-├── styles/global.css            Tailwind + brand tokens
+├── styles/global.css            Tailwind + brand tokens — Audo typography (Playfair/Freight
+│                                 display + Inter/Suisse body) on Rivian colors (off-white +
+│                                 forest greens, Rivian-green accent, pill buttons, green-glow shadow)
 └── content/                     (reserved for MDX essays)
 ```
 
