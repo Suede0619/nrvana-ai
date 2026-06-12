@@ -1,19 +1,20 @@
 @import "tailwindcss";
 
-/* Nrvana AI — Audo typography + Rivian color.
-   Off-white + forest greens, "the green is earned" accent, pill buttons with a
-   green-glow shadow. Display serif (Freight Display → Playfair substitute),
-   clean grotesque body (Suisse → Inter substitute). */
+/* Nrvana AI — Audo typography + blue-green teal palette.
+   Pale aqua-white + deep teals, teal accent, pill buttons with a teal-glow
+   shadow. Display serif (Freight Display → Playfair substitute), clean
+   grotesque body (Suisse → Inter substitute).
+   Palette: #63D4D5 #57BCBE #4BA4A6 #408D8E #347576 #285D5E #1D4646 */
 @theme {
-  --color-canvas: #f8faf8;        /* Off white */
-  --color-canvas-soft: #ebf4ee;   /* Pale mint — cards / alt sections */
-  --color-canvas-warm: #d4e8dc;   /* Nature sky — deeper tint */
-  --color-ink: #1c1c1c;           /* Charcoal */
-  --color-ink-soft: #374151;      /* Body copy */
-  --color-ink-mute: #6b7280;      /* Mid gray — secondary */
-  --color-accent: #3d7a4a;        /* Rivian green */
-  --color-accent-deep: #2c4a30;   /* Forest green — hover / numerals */
-  --color-line: #e2e8f0;          /* Border */
+  --color-canvas: #f4fafa;        /* Pale aqua white */
+  --color-canvas-soft: #e4f2f2;   /* Pale teal — cards / alt sections */
+  --color-canvas-warm: #cde8e8;   /* Deeper pale teal */
+  --color-ink: #1d4646;           /* Darkest teal — text + dark panels */
+  --color-ink-soft: #345758;      /* Body copy — deep teal-gray */
+  --color-ink-mute: #5f8a8b;      /* Secondary — muted teal */
+  --color-accent: #347576;        /* Deep teal — primary accent */
+  --color-accent-deep: #285d5e;   /* Darker teal — hover / numerals */
+  --color-line: #d2e4e4;          /* Pale teal border */
 
   --font-display: "Freight Display Pro", "Playfair Display", Georgia, "Times New Roman", serif;
   --font-body: "Suisse Intl", "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
@@ -66,16 +67,16 @@
     padding: 0.8rem 1.75rem;
     border-radius: 9999px;
     font-weight: 600;
-    box-shadow: 0 2px 12px rgba(61, 122, 74, 0.3);
+    box-shadow: 0 2px 12px rgba(52, 117, 118, 0.3);
     transition: background-color 300ms ease, transform 200ms ease, box-shadow 300ms ease;
   }
   .btn-primary:hover {
     background-color: var(--color-accent-deep);
     transform: scale(1.01);
-    box-shadow: 0 6px 20px rgba(61, 122, 74, 0.35);
+    box-shadow: 0 6px 20px rgba(52, 117, 118, 0.35);
   }
 
-  /* Accent alias — same green pill (used by a few pages). */
+  /* Accent alias — same teal pill (used by a few pages). */
   .btn-accent {
     display: inline-flex;
     align-items: center;
@@ -85,13 +86,13 @@
     padding: 0.8rem 1.75rem;
     border-radius: 9999px;
     font-weight: 600;
-    box-shadow: 0 2px 12px rgba(61, 122, 74, 0.3);
+    box-shadow: 0 2px 12px rgba(52, 117, 118, 0.3);
     transition: background-color 300ms ease, transform 200ms ease, box-shadow 300ms ease;
   }
   .btn-accent:hover {
     background-color: var(--color-accent-deep);
     transform: scale(1.01);
-    box-shadow: 0 6px 20px rgba(61, 122, 74, 0.35);
+    box-shadow: 0 6px 20px rgba(52, 117, 118, 0.35);
   }
 
   .btn-ghost {
