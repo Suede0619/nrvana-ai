@@ -46,8 +46,8 @@ src/
 │   ├── contact.astro            Two doorways: book / say hi
 │   └── legal/                   Privacy + Terms (stubs)
 ├── styles/global.css            Tailwind + brand tokens — Audo typography (Playfair/Freight
-│                                 display + Inter/Suisse body) on a blue-green teal palette
-│                                 (#63D4D5 → #1D4646), teal accent, pill buttons, teal-glow shadow
+│                                 display + Inter/Suisse body) on Rivian colors (off-white +
+│                                 forest greens, Rivian-green accent, pill buttons, green-glow shadow)
 └── content/                     (reserved for MDX essays)
 ```
 
