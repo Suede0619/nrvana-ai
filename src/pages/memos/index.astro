@@ -2,8 +2,16 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { CALL_HREF, BOOKING_EMAIL } from "../../siteConfig";
 
+const published = [
+  {
+    title: "Why your AI keeps forgetting you — and the simple fix",
+    description: "Every session starts from scratch. Here's why — and the 15-minute fix that most people never bother to set up.",
+    date: "June 26, 2026",
+    href: "/memos/ai-memory",
+  },
+];
+
 const upcoming = [
-  "Why your AI keeps forgetting you — and the simple fix",
   "Get your evenings back: where AI actually saves time",
   "You don't need to be technical to use AI well",
   "How a one-person business can run like a team of ten",
@@ -22,14 +30,29 @@ const upcoming = [
     </p>
   </section>
 
+  <section class="section pb-12">
+    <div class="space-y-4">
+      {published.map((p) => (
+        <a href={p.href}
+           class="block rounded-2xl border p-7 transition hover:-translate-y-0.5"
+           style="border-color: var(--color-line); background-color: white;">
+          <div class="text-xs uppercase tracking-widest" style="color: var(--color-ink-mute);">{p.date}</div>
+          <h2 class="mt-2 font-display text-2xl font-semibold">{p.title}</h2>
+          <p class="mt-2 text-sm" style="color: var(--color-ink-soft);">{p.description}</p>
+          <div class="mt-4 text-sm font-medium" style="color: var(--color-accent-deep);">Read →</div>
+        </a>
+      ))}
+    </div>
+  </section>
+
   <section class="section py-12">
     <div class="rounded-2xl p-8" style="background-color: var(--color-canvas-soft);">
-      <div class="text-xs uppercase tracking-widest" style="color: var(--color-accent-deep);">First six, in flight</div>
+      <div class="text-xs uppercase tracking-widest" style="color: var(--color-accent-deep);">Up next</div>
       <ul class="mt-4 space-y-3 font-display text-lg">
         {upcoming.map((u) => <li>· {u}</li>)}
       </ul>
       <p class="mt-6 text-sm" style="color: var(--color-ink-soft);">
-        We're publishing one a week starting soon. Want them in your inbox? Email
+        Publishing one a week. Want them in your inbox? Email{" "}
         <a href={`mailto:${BOOKING_EMAIL}?subject=Memos`} class="underline underline-offset-4">{BOOKING_EMAIL}</a>.
       </p>
       <div class="mt-6">

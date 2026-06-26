@@ -35,20 +35,22 @@ src/
 │   ├── services/
 │   │   ├── index.astro          Services overview (the ladder + offerings table)
 │   │   ├── snapshot.astro       Acceleration Snapshot — $450
-│   │   ├── personal-cortex.astro (stub)
-│   │   ├── diagnostic.astro     (stub)
-│   │   ├── sprints.astro        (stub)
-│   │   ├── governance.astro     (stub)
-│   │   └── retainers.astro      (stub)
+│   │   ├── personal-cortex.astro Personal Cortex Setup — $2,500
+│   │   ├── diagnostic.astro     Team Review — $2,500
+│   │   ├── sprints.astro        Done-for-You Setup — $5k–$15k
+│   │   ├── governance.astro     Safety & Quality Setup — $4k–$8k
+│   │   └── retainers.astro      Monthly Support (individual + team)
 │   ├── method.astro             (stub — full method page coming)
 │   ├── about.astro              Stuart Paul · Founder
-│   ├── memos/index.astro  Memos index (essays coming)
+│   ├── memos/
+│   │   ├── index.astro          Memos index — published + upcoming
+│   │   └── ai-memory.astro      "Why your AI keeps forgetting you" (published)
 │   ├── contact.astro            Two doorways: book / say hi
 │   └── legal/                   Privacy + Terms (stubs)
 ├── styles/global.css            Tailwind + brand tokens — Audo typography (Playfair/Freight
 │                                 display + Inter/Suisse body) on Rivian colors (off-white +
 │                                 forest greens, Rivian-green accent, pill buttons, green-glow shadow)
-└── content/                     (reserved for MDX essays)
+└── content/                     (reserved for future MDX essays)
 ```
 
 ## Brand rules
