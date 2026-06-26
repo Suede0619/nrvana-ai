@@ -3,21 +3,21 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import { CALL_HREF, SNAPSHOT_HREF } from "../../siteConfig";
 
 const deliverables = [
-  { name: "Your Time-Back Map", desc: "A clear picture of where your hours actually go each week — and the three biggest ones AI can quietly take off your plate." },
-  { name: "Your Tool Check", desc: "Which AI tools are worth paying for, which to drop, and which one to start with. No overwhelm — just a short, honest shortlist." },
+  { name: "Your Time-Back Map", desc: "A clear picture of where your hours actually go each week, with the three biggest ones AI can quietly take off your plate." },
+  { name: "Your Tool Check", desc: "Which AI tools are worth paying for, which to drop, and which one to start with. No overwhelm, just a short honest shortlist." },
   { name: "Your 30-Day Plan", desc: "The first few wins, in plain steps, in the order we'd do them. Simple enough to follow on your own if you want to." },
   { name: "Your Starter Setup", desc: "A ready-to-use AI setup that already knows your style, your goals, and the way you work. You just open it and go." },
-  { name: "Your Next Step", desc: "An honest recommendation — keep going on your own, or have us set up the rest for you. Your call, zero pressure." },
+  { name: "Your Next Step", desc: "An honest recommendation: keep going on your own, or have us set up the rest for you. Your call, zero pressure." },
 ];
 
 const schedule = [
-  { day: "Day 1", title: "A friendly chat", desc: "45 minutes with us. We learn how your week works. You don't prep anything — we guide the whole thing." },
+  { day: "Day 1", title: "A friendly chat", desc: "45 minutes with us. We learn how your week works. You don't prep anything. We guide the whole thing." },
   { day: "Day 2", title: "We do the work", desc: "We build your map, your plan, and your starter setup. You carry on with your day." },
   { day: "Day 3", title: "We walk you through it", desc: "60 minutes together. We hand it all over and make sure you feel confident using it." },
 ];
 ---
 
-<BaseLayout title="The Snapshot — $450 · Nrvana AI">
+<BaseLayout title="The Snapshot ($450) · Nrvana AI">
   <section class="section pt-20 pb-12">
     <div class="text-xs uppercase tracking-widest" style="color: var(--color-accent-deep);">For you · Individual</div>
     <h1 class="mt-4 font-display text-5xl font-semibold tracking-tight">
@@ -25,7 +25,7 @@ const schedule = [
     </h1>
     <p class="mt-5 max-w-2xl text-lg" style="color: var(--color-ink-soft);">
       Five plain-English deliverables. One simple plan. Your first AI setup, ready to use. All
-      yours to keep — no tech background needed.
+      yours to keep. No tech background needed.
     </p>
   </section>
 
@@ -95,11 +95,11 @@ const schedule = [
   <section class="section py-20">
     <div class="rounded-2xl p-10 text-center" style="background-color: var(--color-ink); color: var(--color-canvas);">
       <h2 class="font-display text-3xl font-semibold">Ready when you are.</h2>
-      <p class="mt-3" style="color: var(--color-canvas-soft);">Book the Snapshot — or start with a free chat if you'd like to talk first.</p>
+      <p class="mt-3" style="color: var(--color-canvas-soft);">Book the Snapshot, or start with a free chat if you'd like to talk first.</p>
       <div class="mt-8 flex flex-wrap justify-center gap-4">
         <a href={SNAPSHOT_HREF} class="inline-flex items-center gap-2 rounded-md px-6 py-3 font-medium"
            style="background-color: var(--color-canvas); color: var(--color-ink);">
-          Book the Snapshot — $450
+          Book the Snapshot ($450)
         </a>
         <a href={CALL_HREF} class="inline-flex items-center gap-2 rounded-md px-6 py-3 font-medium underline underline-offset-4"
            style="color: var(--color-canvas-soft);">
