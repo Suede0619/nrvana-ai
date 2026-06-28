@@ -2,31 +2,76 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { CALL_HREF } from "../siteConfig";
 
-const steps = [
-  { t: "It knows you", d: "We give your AI a clear sense of who you are, how you work, and what you care about, so its help actually sounds like you, not a generic robot." },
-  { t: "It remembers", d: "No more re-explaining yourself every time. Your AI keeps track of your projects and picks up where you left off." },
-  { t: "It has what it needs", d: "We load it up with the context, templates, and tools for your real work, so it's useful from minute one." },
+const phases = [
+  {
+    n: "01",
+    t: "We learn your world",
+    d: "We spend an hour with you, sometimes less, understanding how your week actually runs: what takes too long, what you dread, what you wish you could hand off. No jargon, no forms. Just a conversation.",
+  },
+  {
+    n: "02",
+    t: "We build around how you work",
+    d: "We create a context file that gives your AI a real sense of who you are: your voice, your industry, your recurring projects, your preferences. Then we wire up memory and templates around your actual tasks, not hypothetical ones.",
+  },
+  {
+    n: "03",
+    t: "We hand it to you and show you the habit",
+    d: "You leave with a working setup and a short weekly routine that keeps it sharp. We stay available for a settling-in window. After that, it's yours, completely.",
+  },
+];
+
+const qa = [
+  {
+    q: "Do I need to understand AI to do this?",
+    a: "No. We handle every technical step. Your only job is to use the thing we hand you.",
+  },
+  {
+    q: "How long does it take?",
+    a: "The Snapshot takes three days. The full Personal Cortex Setup takes five to seven. You are never waiting on us.",
+  },
+  {
+    q: "What if my needs change?",
+    a: "We build on tools you already own and show you how they work. You can update it yourself, or come back to us. No retainer required.",
+  },
+  {
+    q: "What tools do you use?",
+    a: "Whichever tools make sense for you: Claude, ChatGPT, Notion AI, and others. We match the setup to what you already have or what fits your workflow best.",
+  },
 ];
 ---
 
 <BaseLayout title="How it works · Nrvana AI">
   <section class="section pt-20 pb-12">
-    <h1 class="font-display text-5xl font-semibold tracking-tight">
-      Most AI help skips the part that matters. <em>We start there.</em>
+    <h1 class="font-display text-5xl font-semibold tracking-tight max-w-3xl">
+      Three things most AI setups skip. <em>We do all three.</em>
     </h1>
     <p class="mt-5 max-w-2xl text-lg" style="color: var(--color-ink-soft);">
-      The difference between a chatbot that wastes your time and one that genuinely helps comes down
-      to three simple things. We set up all three for you.
+      A generic AI tool starts from zero every session. It doesn't know you, your industry, or your work.
+      We change that. Here's exactly how.
     </p>
   </section>
 
   <section class="section py-12">
-    <div class="grid gap-10 md:grid-cols-3">
-      {steps.map((s, i) => (
+    <div class="space-y-12">
+      {phases.map((p) => (
+        <div class="grid gap-6 md:grid-cols-[4rem_1fr] md:items-start">
+          <div class="font-display text-4xl font-semibold" style="color: var(--color-accent-deep);">{p.n}</div>
+          <div>
+            <h2 class="font-display text-2xl font-semibold">{p.t}</h2>
+            <p class="mt-3 max-w-2xl" style="color: var(--color-ink-soft);">{p.d}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="section py-12 border-t" style="border-color: var(--color-line);">
+    <h2 class="font-display text-3xl font-semibold">Common questions</h2>
+    <div class="mt-8 space-y-8 max-w-2xl">
+      {qa.map((item) => (
         <div>
-          <div class="font-display text-3xl font-semibold" style="color: var(--color-accent-deep);">{String(i + 1).padStart(2, "0")}</div>
-          <h2 class="mt-2 font-display text-2xl font-medium">{s.t}</h2>
-          <p class="mt-3 text-sm" style="color: var(--color-ink-soft);">{s.d}</p>
+          <p class="font-medium">{item.q}</p>
+          <p class="mt-2 text-sm" style="color: var(--color-ink-soft);">{item.a}</p>
         </div>
       ))}
     </div>
@@ -35,16 +80,12 @@ const steps = [
   <section class="section py-12">
     <div class="rounded-2xl p-10" style="background-color: var(--color-canvas-soft);">
       <p class="font-display text-2xl">
-        You don't have to understand any of it. <em>That's our job.</em>
+        Ready to see what it feels like <em>when your AI actually knows you?</em>
       </p>
-      <p class="mt-3" style="color: var(--color-ink-soft);">
-        We handle the setup. You get something that just works and saves you hours.
-      </p>
+      <div class="mt-6 flex flex-wrap gap-4">
+        <a href={CALL_HREF} class="btn-primary">Book a free 30-minute call</a>
+        <a href="/services/snapshot" class="btn-ghost">Or start with the $450 Snapshot →</a>
+      </div>
     </div>
-  </section>
-
-  <section class="section py-16">
-    <a href={CALL_HREF} class="btn-primary">Book a free 30-minute call</a>
-    <a href="/services/snapshot" class="btn-ghost ml-2">Or start with the $450 Snapshot →</a>
   </section>
 </BaseLayout>
