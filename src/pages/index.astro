@@ -30,22 +30,34 @@ const doorways = [
 <BaseLayout>
   <!-- HERO -->
   <section class="section pt-20 pb-16">
-    <h1 class="font-display text-5xl md:text-6xl font-semibold tracking-tight max-w-3xl">
-      You pay for AI tools. <em>We make them actually work for you.</em>
-    </h1>
-    <p class="mt-6 max-w-2xl text-lg" style="color: var(--color-ink-soft);">
-      We set up AI around how you already work, so you save hours every week and your
-      small team punches way above its size. You never need to be technical. That part's on us.
-    </p>
-    <div class="mt-10 flex flex-wrap items-center gap-4">
-      <a href={CALL_HREF} class="btn-primary">
-        Book a free 30-minute call
-      </a>
-      <a href="/services/snapshot" class="btn-ghost">Or start with the $450 Snapshot →</a>
+    <div class="grid gap-16 md:grid-cols-2 md:items-center">
+      <div>
+        <h1 class="font-display text-5xl md:text-6xl font-semibold tracking-tight">
+          You pay for AI tools. <em>We make them actually work for you.</em>
+        </h1>
+        <p class="mt-6 text-lg" style="color: var(--color-ink-soft);">
+          We set up AI around how you already work, so you save hours every week and your
+          small team punches way above its size. You never need to be technical. That part's on us.
+        </p>
+        <div class="mt-10 flex flex-wrap items-center gap-4">
+          <a href={CALL_HREF} class="btn-primary">
+            Book a free 30-minute call
+          </a>
+          <a href="/services/snapshot" class="btn-ghost">Or start with the $450 Snapshot →</a>
+        </div>
+        <p class="mt-4 text-sm" style="color: var(--color-ink-mute);">
+          No pitch, no jargon. Just a friendly chat about where AI could save you time.
+        </p>
+      </div>
+      <div class="hidden md:block">
+        <!-- Drop your generated line art into /public/images/hero-art.png -->
+        <div class="aspect-square w-full max-w-md ml-auto rounded-2xl overflow-hidden border"
+             style="border-color: var(--color-line); background-color: var(--color-canvas-soft);">
+          <img src="/images/hero-art.png" alt="" class="w-full h-full object-cover"
+               onerror="this.style.opacity='0'" />
+        </div>
+      </div>
     </div>
-    <p class="mt-4 text-sm" style="color: var(--color-ink-mute);">
-      No pitch, no jargon. Just a friendly chat about where AI could save you time.
-    </p>
   </section>
 
   <!-- THESIS -->
